@@ -1,11 +1,11 @@
 ## status: correct
-## teardown_command: rm omsllog.txt RealNetwork1.mat
+## teardown_command: rm RealNetwork1.log RealNetwork1.mat
 
 from OMSimulator import OMSimulator
 
 oms = OMSimulator()
 
-oms.setLogFile("omsllog.txt")
+oms.setLogFile("RealNetwork1.log")
 
 model = oms.newModel()
 oms.setTempDirectory(".")
@@ -67,5 +67,5 @@ for signal in signals:
 ## feedback.y is equal
 ## gain.y is equal
 ## step.y is equal
-## info:    Logging information has been saved to "omsllog.txt"
+## info:    Logging information has been saved to "RealNetwork1.log"
 ## endResult

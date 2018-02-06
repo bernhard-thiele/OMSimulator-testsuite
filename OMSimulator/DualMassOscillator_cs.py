@@ -1,10 +1,10 @@
 ## status: correct
-## teardown_command: rm omsllog.txt DualMassOscillator_cs.mat
+## teardown_command: rm DualMassOscillator_cs.log DualMassOscillator_cs.mat
 
 from OMSimulator import OMSimulator
 session = OMSimulator()
 
-session.setLogFile("omsllog.txt")
+session.setLogFile("DualMassOscillator_cs.log")
 
 model = session.newModel()
 session.setTempDirectory(".")
@@ -41,5 +41,5 @@ session.unload(model)
 ## System2.mass2.s at 0.1: -0.296093118317
 ## info:    1 warnings
 ## info:    0 errors
-## info:    Logging information has been saved to "omsllog.txt"
+## info:    Logging information has been saved to "DualMassOscillator_cs.log"
 ## endResult

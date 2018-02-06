@@ -1,7 +1,7 @@
 -- status: correct
--- teardown_command: rm omsllog.txt DualMassOscillatorEq_me.mat
+-- teardown_command: rm DualMassOscillatorEq_me.log DualMassOscillatorEq_me.mat
 
-setLogFile("omsllog.txt")
+setLogFile("DualMassOscillatorEq_me.log")
 
 model = newModel()
 setTempDirectory(".")
@@ -45,5 +45,5 @@ unload(model)
 -- Result:
 -- System1.s1 at 0.1: -0.44647144348144
 -- System2.s2 at 0.1: -0.28277588561346
--- info:    Logging information has been saved to "omsllog.txt"
+-- info:    Logging information has been saved to "DualMassOscillatorEq_me.log"
 -- endResult
