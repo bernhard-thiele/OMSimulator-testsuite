@@ -4,9 +4,13 @@ all: difftool test
 
 test: OMSimulator.log
 
-OMSimulator.log:
-	@$(MAKE) -C OMSimulator > OMSimulator.log
-	@grep == OMSimulator.log
+partest: difftool
+  cd partest
+  time ./runtests.pl -nocolour -with-xml
+
+OMSimulator.log: difftool
+	$(MAKE) -C OMSimulator -f Makefile test > $@
+	grep == OMSimulator.log
 
 difftool:
-	@$(MAKE) -C difftool
+	$(MAKE) -C difftool
