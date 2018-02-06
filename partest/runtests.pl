@@ -244,12 +244,12 @@ sub parse_testfiles {
   }
 }
 
-# Extract all files beginning with .mo|.mof|.mos from a line.
+# Extract all files beginning with .mo|.mof|.mos|.py|lua from a line.
 sub add_tests {
   my @tests = split(/\s|=|\\/, shift);
   my $path = shift;
 
-  @tests = grep(/\.mo|\.mof|\.mos/, @tests);
+  @tests = grep(/\.mo|\.mof|\.mos|\.py|\.lua/, @tests);
   @tests = map { $_ = ("$path/$_" =~ s/\/\//\//rg) } @tests;
 
   push @test_list, @tests;
