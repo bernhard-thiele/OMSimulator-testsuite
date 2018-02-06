@@ -1,8 +1,10 @@
-.PHONY: all OMSimulator difftool
+.PHONY: all OMSimulator.log difftool
 
-all: OMSimulator
+all: difftool test
 
-OMSimulator:
+test: OMSimulator.log
+
+OMSimulator.log:
 	@$(MAKE) -C OMSimulator > OMSimulator.log
 	@grep == OMSimulator.log
 
