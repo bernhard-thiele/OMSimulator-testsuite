@@ -5,7 +5,7 @@ from OMSimulator import OMSimulator
 session = OMSimulator()
 
 session.setLogFile("PI_Controller.log")
-session.setTempDirectory(".")
+session.setTempDirectory("./PI_Controller_tmp")
 
 model = session.newModel()
 

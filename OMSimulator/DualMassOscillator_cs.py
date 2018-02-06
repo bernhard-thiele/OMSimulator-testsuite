@@ -7,7 +7,7 @@ session = OMSimulator()
 session.setLogFile("DualMassOscillator_cs.log")
 
 model = session.newModel()
-session.setTempDirectory(".")
+session.setTempDirectory("./DualMassOscillator_cs_tmp")
 
 # instantiate FMUs
 session.instantiateFMU(model, "../FMUs/DualMassOscillator.System1_cs.fmu", "System1")

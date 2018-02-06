@@ -8,7 +8,7 @@ oms = OMSimulator()
 oms.setLogFile("RealNetwork1.log")
 
 model = oms.newModel()
-oms.setTempDirectory(".")
+oms.setTempDirectory("./RealNetwork1_tmp")
 
 # instantiate FMUs
 oms.instantiateFMU(model, "../FMUs/Modelica.Blocks.Math.Add.fmu", "add")

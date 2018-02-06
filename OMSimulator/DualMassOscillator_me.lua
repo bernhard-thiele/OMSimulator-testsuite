@@ -4,7 +4,7 @@
 setLogFile("DualMassOscillator_me.log")
 
 model = newModel()
-setTempDirectory(".")
+setTempDirectory("./DualMassOscillator_me_tmp")
 
 -- instantiate FMUs
 instantiateFMU(model, "../FMUs/DualMassOscillator.System1_me.fmu", "System1")
