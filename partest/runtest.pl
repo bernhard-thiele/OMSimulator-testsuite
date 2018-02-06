@@ -191,9 +191,7 @@ sub exit_sandbox {
 }
 
 sub needs_sandbox {
-  if ($test eq "CheckSourcesForTabs.mos") { return 0; }
-  if ($test eq "testCompileInteractive.mos") { return 0; }
-  return 1;
+  return 0;
 }
 
 $ENV{'PATH'} = "./:" . $ENV{'PATH'};
