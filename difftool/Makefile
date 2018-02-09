@@ -3,7 +3,17 @@ CC = gcc
 EXT=".exe"
 endif
 
-OMBUILDDIR=../../install/linux
+# ugly fix for macosx
+detected_OS := $(shell uname -s)
+ifeq ($(detected_OS),Darwin)
+	OMBUILDDIR =../../install/mac
+else
+ifeq (MINGW,$(findstring MINGW,$(detected_OS)))
+	OMBUILDDIR =../../install/mingw
+else
+	OMBUILDDIR =../../install/mac
+endif
+endif
 
 $(OMBUILDDIR)/bin/omc-diff$(EXT): lex.yy.o $(OMBUILDDIR)/bin
 	$(CC) -o $@ lex.yy.o

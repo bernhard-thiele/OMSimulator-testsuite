@@ -5,8 +5,20 @@ use File::Temp qw/ tempfile /;
 (undef,$testTempFile) = tempfile("rtest$$.XXXXX", TMPDIR => 1, SUFFIX => ".tmp", UNLINK => 1);
 $cwd = getcwd;
 if ($cwd =~ m/(.*)testsuite\/(.+)$/) {
+  $prefix = $1;
   $dirname = $2;
-  $INSTALLDIR = "$1/install/linux";
+  $os = `uname`;
+  if ($os =~ /MINGW/) {
+    $INSTALLDIR = "$prefix/install/mingw";
+  }
+  else {
+    if ($os =~ /Darwin/) {
+      $INSTALLDIR = "$prefix/install/mac";
+    }
+    else {
+      $INSTALLDIR = "$prefix/install/linux";
+    }
+  }
 } else {
   print "You must run rtest from OMSimulator (was run from $cwd)\n";
   exit 0;
