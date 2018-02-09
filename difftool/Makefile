@@ -1,18 +1,16 @@
 ifdef OMDEV
-CC = gcc
-EXT=".exe"
+	CC = gcc
+	EXT=".exe"
 endif
 
 # ugly fix for macosx
 detected_OS := $(shell uname -s)
 ifeq ($(detected_OS),Darwin)
 	OMBUILDDIR =../../install/mac
-else
-ifeq (MINGW,$(findstring MINGW,$(detected_OS)))
+else ifeq (MINGW,$(findstring MINGW,$(detected_OS)))
 	OMBUILDDIR =../../install/mingw
 else
-	OMBUILDDIR =../../install/mac
-endif
+	OMBUILDDIR =../../install/linux
 endif
 
 $(OMBUILDDIR)/bin/omc-diff$(EXT): lex.yy.o $(OMBUILDDIR)/bin
