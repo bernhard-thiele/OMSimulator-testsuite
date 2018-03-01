@@ -2,6 +2,7 @@ TEST = ../rtest -v
 
 TESTFILES = \
 api-test01.lua \
+api-test02.lua \
 
 # Run make failingtest
 FAILINGTESTFILES = \
