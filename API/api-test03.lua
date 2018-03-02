@@ -10,10 +10,10 @@ print("status code: " .. status)
 status = oms2_newFMIModel("api_test03")
 print("status code: " .. status)
 
--- instantiate FMUs
-status = oms2_instantiateFMU("api_test03", "../FMUs/DualMassOscillator.System1_me.fmu", "System1")
+-- add FMUs
+status = oms2_addFMU("api_test03", "../FMUs/DualMassOscillator.System1_me.fmu", "System1")
 print("status code: " .. status)
-status = oms2_instantiateFMU("api_test03", "../FMUs/DualMassOscillator.System2_me.fmu", "System2")
+status = oms2_addFMU("api_test03", "../FMUs/DualMassOscillator.System2_me.fmu", "System2")
 print("status code: " .. status)
 
 -- add connections
