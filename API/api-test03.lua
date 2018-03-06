@@ -1,10 +1,9 @@
 -- status: correct
 -- teardown_command: rm -rf api-test03.log api_test03.xml api-test03_tmp
 
-setLogFile("api-test03.log")
-oms2_setLoggingLevel(0)
+oms2_setLogFile("api-test03.log")
 
-status = setTempDirectory("./api-test03_tmp")
+status = oms2_setTempDirectory("./api-test03_tmp")
 print("status code: " .. status)
 
 status = oms2_newFMIModel("api_test03")
