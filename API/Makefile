@@ -4,6 +4,7 @@ TESTFILES = \
 api-test01.lua \
 api-test02.lua \
 api-test03.lua \
+api-test04.lua \
 
 # Run make failingtest
 FAILINGTESTFILES = \
