@@ -55,7 +55,22 @@ os.execute("cat api_test03.xml")
 -- <?xml version="1.0" encoding="UTF-8"?>
 -- <ssd:SystemStructureDescription name="api_test03" version="Draft20171219">
 -- 	<ssd:System name="api_test03">
--- 		<ssd:Component name="System2" type="application/x-fmu-sharedlibrary" source="../FMUs/DualMassOscillator.System2_me.fmu" />
+-- 		<ssd:Component name="System2" type="application/x-fmu-sharedlibrary" source="../FMUs/DualMassOscillator.System2_me.fmu">
+-- 			<ssd:Connectors>
+-- 				<ssd:Connector name="a" kind="input" type="Real">
+-- 					<ssd:ConnectorGeometry x="0.000000" y="0.250000" />
+-- 				</ssd:Connector>
+-- 				<ssd:Connector name="s" kind="input" type="Real">
+-- 					<ssd:ConnectorGeometry x="0.000000" y="0.500000" />
+-- 				</ssd:Connector>
+-- 				<ssd:Connector name="v" kind="input" type="Real">
+-- 					<ssd:ConnectorGeometry x="0.000000" y="0.750000" />
+-- 				</ssd:Connector>
+-- 				<ssd:Connector name="F" kind="output" type="Real">
+-- 					<ssd:ConnectorGeometry x="1.000000" y="0.500000" />
+-- 				</ssd:Connector>
+-- 			</ssd:Connectors>
+-- 		</ssd:Component>
 -- 		<ssd:Connections />
 -- 	</ssd:System>
 -- 	<ssd:DefaultExperiment startTime="0.000000" stopTime="1.000000" />
