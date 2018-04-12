@@ -1,0 +1,8 @@
+loadModel(Modelica); getErrorString();
+loadFile("MultiMassOscillator.mo"); getErrorString();
+
+buildModelFMU(MultiMassOscillator.System1, version="2.0", fmuType="cs", fileNamePrefix="MultiMassOscillator.System1_cs", platforms={"static"}); getErrorString();
+buildModelFMU(MultiMassOscillator.System2, version="2.0", fmuType="cs", fileNamePrefix="MultiMassOscillator.System2_cs", platforms={"static"}); getErrorString();
+
+//buildModelFMU(MultiMassOscillator.System1Eq, version="2.0", fmuType="cs", fileNamePrefix="MultiMassOscillator.System1Eq_cs", platforms={"static"}); getErrorString();
+//buildModelFMU(MultiMassOscillator.System2Eq, version="2.0", fmuType="cs", fileNamePrefix="MultiMassOscillator.System2Eq_cs", platforms={"static"}); getErrorString();
