@@ -26,6 +26,7 @@ setCommunicationInterval(model, 1e-5)
 -- pmrchannela / pmrchannelcv: Channel based approach. Which one is actually active depends on #define in PMRChannel.h
 -- pmrtaskpoola : "task pool" approach using atomic variables for synchronization
 -- pmrtaskpoolcv : "task pool" approach using condition variables
+-- pmrctpl : task pool approach using CTPL library (https://github.com/vit-vit/CTPL)
 -- Caution: p
 setMasterVariant(model, "pmrchannela")
 setDisableResultWriting(model, 1)
